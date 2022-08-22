@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="ko">
+    
+    
+  <head>
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>구렁이 모음집</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <style>
+      p { margin:20px 0px; }
+      img { display : block;
+            margin : auto;}
+    
+    </style>
+   
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <p>사진</p>
+          <ul class="nav nav-tabs">
+            <li class="nav-item">
+                
+                <a class="nav-link active" href="#"onclick="getShowmain()">메인</a>
+                                
+            </li>
+              
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">구렁</a>
+              <div class="dropdown-menu">
+              <a class="dropdown-item" href="#"onclick="getShowgurunggurung()" value="보이기">구렁</a>
+             
+            </div>
+            </li>            
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">Dropdown</a>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="#"onclick="getHidemain()" value="보이기">구렁</a>
+                <a class="dropdown-item" href="#" onclick="location.href='tabele.html'">테이블</a>
+                <a class="dropdown-item" href="#">Ipsum</a>
+                <a class="dropdown-item" href="#">Dolor</a>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Dolor</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled" href="#">Disabled</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    
+    <img src="1.jpg" id="Img_Area" width="50%" height="600" onclick="chgImg();">                              
+       
+    
+    <img src="gurung.jpg" id ="Img_Area1"  width="50%" height="600" >  
+
+    <script src="http://code.jquery.com/jquery-3.5.1.min.js"></script>    
+    <script>
+        var img = new Array("1.jpg","2.jpg")
+
+        var i;
+        i=0;
+        function chgImg(){            
+            if(i == 1) i=0;
+            else 	   i++;	
+            document.images[0].src=img[i];
+        }
+    </script>
+       
+    <script>
+        document.getElementById("Img_Area1").style.display = "none";
+              
+        
+        function getShowmain(){
+            alert("메인사진");
+            
+            document.getElementById("Img_Area").style.display = "";
+            document.getElementById("Img_Area1").style.display = "none";
+        }
+
+        function getShowgurunggurung(){
+            alert("구렁이 사진");
+            document.getElementById("Img_Area").style.display = "none";
+            document.getElementById("Img_Area1").style.display = "";
+            
+        }
+    </script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    
+  </body>
+</html>
