@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="ko">
+    
+    
+  <head>
+    <script>
+       
+        var mainimg = new Array("main1.jpg","main2.jpg","main3.jpg","main4.jpg")
+        
+        
+        
+        var i;
+        i=0;
+        function chgImg(){   
+                  
+            if(i == 4) i=0;
+            else 	   i;	
+            document.images[0].src=mainimg[i++];
+            
+        }
+        
+    </script>
+    
+    <script>
+        var gugimg = new Array(
+            "gug1.jpg","gug2.jpg","gug3.jpg","gug4.jpg","gug5.jpg","gug6.jpg","gug7.jpg","gug8.jpg","gug9.jpg","gug10.jpg","gug11.jpg","gug12.jpg",
+            "gug13.jpg","gug14.jpg","gug15.jpg","gug16.jpg","gug17.jpg","gug18.jpg","gug19.jpg","gug20.jpg","gug21.jpg","gug22.jpg","gug23.jpg","gug24.jpg",
+            "gug25.jpg","gug26.jpg","gug27.jpg","gug28.jpg","gug29.jpg","gug30.jpg","gug31.jpg","gug32.jpg","gug33.jpg","gug34.jpg","gug35.jpg","gug36.jpg",
+            "gug37.jpg","gug38.jpg","gug39.jpg","gug40.jpg","gug41.jpg","gug42.jpg","gug43.jpg","gug44.jpg","gug45.jpg","gug46.jpg","gug47.jpg","gug48.jpg",
+            "gug49.jpg","gug50.jpg","gug51.jpg","gug52.jpg","gug53.jpg","gug54.jpg","gug55.jpg","gug56.jpg","gug57.jpg","gug58.jpg","gug59.jpg","gug60.jpg",
+            "gug61.jpg","gug62.jpg","gug63.jpg","gug64.jpg","gug65.jpg","gug66.jpg","gug67.jpg","gug68.jpg","gug69.jpg","gug70.jpg","gug71.jpg","gug72.jpg",
+            "gug73.jpg","gug74.jpg","gug75.jpg","gug76.jpg","gug77.jpg","gug78.jpg","gug79.jpg","gug80.jpg","gug81.jpg","gug82.jpg","gug83.jpg","gug84.jpg",
+            "gug85.jpg","gug86.jpg","gug87.jpg","gug88.jpg","gug89.jpg","gug90.jpg","gug91.jpg","gug92.jpg","gug93.jpg","gug94.jpg","gug95.jpg","gug96.jpg",
+            "gug97.jpg","gug98.jpg","gug99.jpg","gug100.jpg","gug101.jpg","gug102.jpg","gug103.jpg","gug104.jpg","gug105.jpg","gug106.jpg","gug107.jpg","gug108.jpg",
+            "gug109.jpg","gug110.jpg","gug111.jpg","gug112.jpg","gug113.jpg","gug114.jpg","gug115.jpg","gug116.jpg","gug117.jpg","gug118.jpg","gug119.jpg","gug120.jpg",
+            "gug121.jpg","gug122.jpg","gug123.jpg","gug124.jpg","gug125.jpg","gug126.jpg","gug127.jpg","gug128.jpg","gug129.jpg","gug130.jpg","gug131.jpg","gug132.jpg",
+            "gug133.jpg","gug134.jpg","gug135.jpg","gug136.jpg","gug137.jpg","gug138.jpg","gug139.jpg","gug140.jpg","gug141.jpg","gug142.jpg","gug143.jpg","gug144.jpg",
+            "gug145.jpg","gug146.jpg","gug147.jpg","gug148.jpg","gug149.jpg","gug150.jpg","gug151.jpg","gug152.jpg","gug153.jpg","gug154.jpg","gug155.jpg"
+            )
+        
+        var k;
+        k=0;
+        function chgImg2(){
+                     
+            if(k == 155) k=0;
+            else 	   k;	
+            document.images[0].src=gugimg[k++];
+        }
+        function chgImg22(){
+                     
+            document.images[0].src=gugimg[--k];
+        }
+    </script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>구렁이 모음집</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <style>
+        body {            
+            background-image: url("background.jpg");           
+            font-family: "Roboto", sans-serif;
+            font-size: 14px;
+            margin: 0;
+        }
+
+        input { margin:20px 450px;
+            list-style-type: none;
+            text-align: center;
+            padding: 0;
+            width: 200px;
+        }    
+        
+        .menu {
+            width: 600px; 
+            height: 70px;
+            margin: 0 auto;
+            color: #000000;
+            font-weight: bold;
+            background: #a91212;
+            
+        }
+        .menu>li a {
+            display: block;
+            color: rgb(0, 0, 0);
+        }
+
+        .menu>li { 
+            float: left;
+            width: 25%;
+            line-height: 50px; 
+            text-align: center;
+            position: relative;
+        }
+        .menu>li:hover {
+            background: #a91212;
+            color: rgb(0, 0, 0);
+            font-weight: bold;
+        }
+        .submenu>li a:hover {
+            background: #201182;
+            color: rgb(0, 0, 0);
+            font-weight: bold;
+        }
+        
+        .menu>li:hover .submenu {
+            background: #1e9375;
+            color: rgb(0, 0, 0);
+            left: 0;
+
+        }
+        .submenu {
+            position: absolute;
+            top: 50px;
+            left: -9999px;
+            background: rgb(21, 150, 12);
+            width: 120%;
+        }
+
+        img { display : block;
+            height: 580px;
+            margin : auto;} 
+        
+        
+        
+    </style>
+
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col">
+            <input type="image" src="title.jpg" style="border: none;" height="50" width="50"/>
+          <ul class="menu">
+            <li>                                                
+                <a class="nav-link" href="#" onclick="getShowmain()">메인</a>                                            
+            </li>
+
+            <li>                                                
+                <a class="nav-link" href="#" onclick="getShowgug()">성장일기</a>                                            
+            </li>           
+            <li>
+              <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">Dropdown</a>
+            <ul class="submenu">  
+              
+                <li><a class="dropdown-item" href="#"onclick="getHidemain()" value="보이기">구렁</a></li>
+                <li><a class="dropdown-item" href="#" onclick="location.href='tabele.html'">테이블</a></li>
+                <li><a class="dropdown-item" href="#">Ipsum</a></li>
+                <li><a class="dropdown-item" href="#">Dolor</a></li>
+              
+            </ul>  
+            </li>
+            <li>
+              <a class="nav-link" href="#">Dolor</a>
+            </li>
+          </ul>
+          
+          <img src="main1.jpg" id="Img_Area" width="50%" height="500">
+        
+        </div>    
+        </div>
+        
+      </div>       
+    </div>    
+    <style>
+        #btn1{
+            width: 100px;
+            height: 50px;
+            top: 23%;
+            right: 23%;
+            border-radius: 40px;
+            position: absolute;
+    
+           }
+        #btn2{
+            width: 100px;
+            height: 50px;
+            top: 30%;
+            right: 23%;
+            border-radius: 40px;
+            position: absolute;
+    
+        }
+        #btn3{
+            width: 100px;
+            height: 50px;
+            top: 37%;
+            right: 23%;
+            border-radius: 40px;
+            position: absolute;
+    
+        }      
+    </style>                        
+    <div id="btn_group">
+        <li>
+           <a><<button id="btn1" button type="button" onclick="chgImg();">메인</a>
+           <a><<button id="btn2" button type="button" onclick="chgImg2();">성장일기</a>
+           <a><<button id="btn3" button type="button" onclick="chgImg22();">성장일기(뒤로)</a>   
+        </li>   
+    
+    
+
+    <script src="http://code.jquery.com/jquery-3.5.1.min.js"></script>   
+
+    <script>
+        
+        document.getElementById("btn1").style.display = "none";
+        document.getElementById("btn2").style.display = "none";   
+        document.getElementById("btn3").style.display = "none";         
+    </script>
+    <script>
+        
+    </script>
+    <script>
+          
+        function getShowmain(){
+            
+            alert("메인사진");
+                       
+            document.getElementById("btn1").style.display = "";
+            document.getElementById("btn2").style.display = "none";
+            document.getElementById("btn3").style.display = "none";
+                       
+        }
+    </script>
+    <script>
+            
+        function getShowgug(){
+            
+            alert("구렁이 사진");
+            document.getElementById("btn1").style.display = "none";
+            document.getElementById("btn2").style.display = "";
+            document.getElementById("btn3").style.display = "";
+            
+
+        }
+    </script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    
+  </body>
+</html>
