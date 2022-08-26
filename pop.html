@@ -1,0 +1,59 @@
+<!doctype html>
+<html> 
+    <head>
+        <title>Photo</title>
+    </head>
+    <body>
+        <script>   
+            function random() {
+                num=Math.floor(Math.random()*155);
+                document.write( '<img src="gug'+num+'.jpg" width="200" height="300" border="0">');
+            }
+    
+        </script>
+        
+        <style>
+            body {            
+                       
+                font-family: "Roboto", sans-serif;
+                border-radius: 40px;
+                font-size: 14px;
+                margin: 0;
+                background-image: url("backimg.jpg");
+                background-repeat: no-repeat;
+                
+            }
+            .border_view img{
+                border-image: linear-gradient(#c23232, #4d9f0c) 30;
+
+            }
+            img { 
+                display : block;              
+                margin: 100px 150px;                              
+            }  
+            #btn1{            
+                width: 50px;
+                height: 50px;
+                top: 0%;
+                right: 45%;
+                border:none;               
+                text-indent: -9999px;
+                background-image: url("");
+                position: absolute;
+                background-repeat: no-repeat;
+                background-size: cover;    
+            }
+        </style>
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <a><button id="btn1" button type="button" alt="사진">메인</a>
+    </div>
+    
+    <script>
+        random();
+    </script>
+    </div>
+    </div>
+    </body>
+</html>
